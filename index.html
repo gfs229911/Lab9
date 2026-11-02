@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>GreenForm — Landscape Design Company</title>
+  <meta name="description" content="Landscape design: portfolio of completed gardens, project cost calculator and specialist visit request.">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+
+<header class="site-header">
+  <a class="logo" href="#top">GreenForm</a>
+  <a class="phone" href="tel:+77001234567">+7 700 123 45 67</a>
+  <button class="burger" type="button" aria-expanded="false" aria-controls="menu" aria-label="Open menu">
+    <span></span><span></span><span></span>
+  </button>
+  <nav id="menu" class="nav" aria-label="Main">
+    <ul>
+      <li><a href="#gardens">Completed Gardens</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#price">Price List</a></li>
+      <li><a href="#contacts">Contacts</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main id="top">
+
+  <section class="hero" aria-labelledby="hero-title">
+    <div class="hero-text">
+      <h1 id="hero-title">We Create Harmony of Nature on Your Site</h1>
+      <p>Design, planting and irrigation for gardens, parks and estates. From survey to the first bloom.</p>
+      <a class="cta" href="#price">Calculate Project Cost</a>
+    </div>
+  </section>
+
+  <section id="gardens" class="section" aria-labelledby="gardens-title">
+    <h2 id="gardens-title">Completed Gardens</h2>
+    <p class="lead">Drag the slider on each card to compare the site before and after.</p>
+    <div class="grid">
+
+      <article class="card">
+        <div class="ba" data-pos="50"><div class="ba-before"></div><div class="ba-after"></div>
+          <input class="ba-range" type="range" min="0" max="100" value="50" aria-label="Before / After comparison"></div>
+        <h3>Riverside Park</h3>
+        <p class="meta"><span>12.5 acres</span><span class="tag">Naturalistic</span></p>
+      </article>
+
+      <article class="card">
+        <div class="ba"><div class="ba-before"></div><div class="ba-after"></div>
+          <input class="ba-range" type="range" min="0" max="100" value="50" aria-label="Before / After comparison"></div>
+        <h3>Courtyard Villa</h3>
+        <p class="meta"><span>0.8 acres</span><span class="tag">Minimalist</span></p>
+      </article>
+
+      <article class="card">
+        <div class="ba"><div class="ba-before"></div><div class="ba-after"></div>
+          <input class="ba-range" type="range" min="0" max="100" value="50" aria-label="Before / After comparison"></div>
+        <h3>Hotel Terrace</h3>
+        <p class="meta"><span>2.3 acres</span><span class="tag">Mediterranean</span></p>
+      </article>
+
+      <article class="card">
+        <div class="ba"><div class="ba-before"></div><div class="ba-after"></div>
+          <input class="ba-range" type="range" min="0" max="100" value="50" aria-label="Before / After comparison"></div>
+        <h3>Business Center Lawn</h3>
+        <p class="meta"><span>4.1 acres</span><span class="tag">Modern</span></p>
+      </article>
+
+      <article class="card">
+        <div class="ba"><div class="ba-before"></div><div class="ba-after"></div>
+          <input class="ba-range" type="range" min="0" max="100" value="50" aria-label="Before / After comparison"></div>
+        <h3>Mountain Cottage</h3>
+        <p class="meta"><span>1.6 acres</span><span class="tag">Alpine</span></p>
+      </article>
+
+      <article class="card">
+        <div class="ba"><div class="ba-before"></div><div class="ba-after"></div>
+          <input class="ba-range" type="range" min="0" max="100" value="50" aria-label="Before / After comparison"></div>
+        <h3>City Square</h3>
+        <p class="meta"><span>6.0 acres</span><span class="tag">Urban</span></p>
+      </article>
+
+    </div>
+  </section>
+
+  <section id="services" class="section alt" aria-labelledby="services-title">
+    <h2 id="services-title">Services</h2>
+    <ul class="services">
+      <li><h3>Landscape design</h3><p>Master plan, 3D visuals and planting scheme.</p></li>
+      <li><h3>Planting</h3><p>Trees, shrubs and lawns from partner nurseries.</p></li>
+      <li><h3>Irrigation</h3><p>Automatic watering systems with smart controllers.</p></li>
+      <li><h3>Maintenance</h3><p>Seasonal care so the garden keeps its shape.</p></li>
+    </ul>
+  </section>
+
+  <section id="price" class="section" aria-labelledby="price-title">
+    <h2 id="price-title">Price List</h2>
+    <div class="price-wrap">
+      <dl class="prices">
+        <div><dt>Landscape design</dt><dd>$1,200 / acre</dd></div>
+        <div><dt>Planting</dt><dd>$2,500 / acre</dd></div>
+        <div><dt>Irrigation</dt><dd>$1,800 / acre</dd></div>
+        <div><dt>Turnkey project</dt><dd>$5,500 / acre</dd></div>
+      </dl>
+      <form class="calc" id="calc">
+        <h3>Project cost calculator</h3>
+        <label for="calc-service">Service</label>
+        <select id="calc-service">
+          <option value="1200">Landscape design</option>
+          <option value="2500">Planting</option>
+          <option value="1800">Irrigation</option>
+          <option value="5500" selected>Turnkey project</option>
+        </select>
+        <label for="calc-area">Area, acres</label>
+        <input id="calc-area" type="number" min="0.1" step="0.1" value="1" required>
+        <output id="calc-result" class="result" aria-live="polite">$5,500</output>
+      </form>
+    </div>
+  </section>
+
+  <section id="contacts" class="section alt" aria-labelledby="form-title">
+    <h2 id="form-title">Call a measurement engineer</h2>
+    <form class="request" id="request" action="#" method="post">
+      <div class="field">
+        <label for="name">Name</label>
+        <input id="name" name="name" type="text" placeholder=" " autocomplete="name" minlength="2" required>
+        <small>Enter at least 2 characters.</small>
+      </div>
+      <div class="field">
+        <label for="phone">Contact Phone</label>
+        <input id="phone" name="phone" type="tel" placeholder=" " autocomplete="tel" pattern="[0-9+()\- ]{10,18}" required>
+        <small>Use digits, for example +7 700 123 45 67.</small>
+      </div>
+      <div class="field">
+        <label for="location">Geographical Location of the Object</label>
+        <input id="location" name="location" type="text" placeholder=" " minlength="3" required>
+        <small>City, district or coordinates.</small>
+      </div>
+      <div class="field">
+        <label for="date">Calendar Date</label>
+        <input id="date" name="date" type="date" required>
+        <small>Choose a visit date.</small>
+      </div>
+      <button class="cta" type="submit">Request a visit</button>
+      <p id="form-status" class="status" role="status"></p>
+    </form>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="footer-grid">
+    <section aria-labelledby="kb-title">
+      <h2 id="kb-title">Flora care knowledge base</h2>
+      <ul>
+        <li><a href="#">Watering by season</a></li>
+        <li><a href="#">Lawn care calendar</a></li>
+        <li><a href="#">Pruning trees and shrubs</a></li>
+      </ul>
+    </section>
+    <section aria-labelledby="nur-title">
+      <h2 id="nur-title">Partner nurseries</h2>
+      <ul>
+        <li><a href="#">Green Valley Nursery</a></li>
+        <li><a href="#">Almaty Seedlings</a></li>
+        <li><a href="#">Alpine Plants Co.</a></li>
+      </ul>
+    </section>
+    <section aria-labelledby="legal-title">
+      <h2 id="legal-title">Legal information</h2>
+      <p>GreenForm LLP, BIN 000000000000.<br>Almaty, Kazakhstan.</p>
+      <p><a href="#">Privacy policy</a></p>
+    </section>
+    <section aria-labelledby="theme-title">
+      <h2 id="theme-title">Theme</h2>
+      <label for="theme" class="sr-only">Theme mode</label>
+      <select id="theme">
+        <option value="system">System</option>
+        <option value="light">Light</option>
+        <option value="dark">Dark</option>
+      </select>
+    </section>
+  </div>
+  <p class="copy">&copy; 2026 GreenForm. All rights reserved.</p>
+</footer>
+
+</body>
+</html>
